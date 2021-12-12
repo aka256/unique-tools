@@ -82,3 +82,10 @@
 # 1tick内で消去するentity
 # @internal
 #declare tag uniquetools.temp.tick
+
+#>
+# 初期化済みプレイヤーに付与するタグ
+# @within
+#   uniquetools:init
+#   uniquetools:tick
+#declare tag uniquetools.initialized

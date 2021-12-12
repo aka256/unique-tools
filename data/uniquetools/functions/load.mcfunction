@@ -28,8 +28,6 @@
   
   scoreboard objectives add uniquetools.config.expand_pickaxe_mark1.size dummy
   scoreboard objectives add uniquetools.config.expand_pickaxe_mark2.size dummy
-  scoreboard players set @a uniquetools.config.expand_pickaxe_mark1.size 1
-  scoreboard players set @a uniquetools.config.expand_pickaxe_mark2.size 1
 
 # core/manage_sneak
   scoreboard objectives add uniquetools.sneak_time custom:sneak_time

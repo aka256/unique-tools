@@ -2,6 +2,9 @@
 #
 # @handles #minecraft:tick
 
+#
+  execute as @a[tag=!uniquetools.initialized] run function uniquetools:init
+
 # sneak検知&Tag付与
   function uniquetools:core/manage_sneak/tick
 
