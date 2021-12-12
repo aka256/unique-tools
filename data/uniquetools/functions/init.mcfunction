@@ -9,4 +9,7 @@
   scoreboard players set @s uniquetools.config.expand_pickaxe_mark2.size 1
 
 # core/manage_sneak
-  tag @s add uniquetools.sneaked_twice
+  tag @s add uniquetools.sneak_pushed_twice
+
+# タグの付与
+  tag @s add uniquetools.initialized
