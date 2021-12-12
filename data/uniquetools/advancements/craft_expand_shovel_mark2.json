@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "uniquetools:expand_shovel_mark2"
+      }
+    }
+  },
+  "rewards": {
+    "function": "uniquetools:recipe/expand_shovel_mark2"
+  }
+}

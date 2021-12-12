@@ -29,6 +29,24 @@
   scoreboard objectives add uniquetools.config.expand_pickaxe_mark1.size dummy
   scoreboard objectives add uniquetools.config.expand_pickaxe_mark2.size dummy
 
+# expand_shovel
+  scoreboard objectives add uniquetools.use.diamond_shovel used:diamond_shovel
+  scoreboard objectives add uniquetools.use.delta.diamond_shovel dummy
+  scoreboard objectives add uniquetools.use.netherite_shovel used:netherite_shovel
+  scoreboard objectives add uniquetools.use.delta.netherite_shovel dummy
+  
+  scoreboard objectives add uniquetools.config.expand_shovel_mark1.size dummy
+  scoreboard objectives add uniquetools.config.expand_shovel_mark2.size dummy
+
+# expand_axe
+  scoreboard objectives add uniquetools.use.diamond_axe used:diamond_axe
+  scoreboard objectives add uniquetools.use.delta.diamond_axe dummy
+  scoreboard objectives add uniquetools.use.netherite_axe used:netherite_axe
+  scoreboard objectives add uniquetools.use.delta.netherite_axe dummy
+  
+  scoreboard objectives add uniquetools.config.expand_axe_mark1.size dummy
+  scoreboard objectives add uniquetools.config.expand_axe_mark2.size dummy
+
 # core/manage_sneak
   scoreboard objectives add uniquetools.sneak_time custom:sneak_time
   scoreboard objectives add uniquetools.delta_sneak_time dummy

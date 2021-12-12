@@ -66,6 +66,26 @@
 #>
 #
 # @within uniquetools:tick
+#declare objective uniquetools.use.diamond_shovel
+
+#>
+#
+# @within uniquetools:tick
+#declare objective uniquetools.use.netherite_shovel
+
+#>
+#
+# @within uniquetools:tick
+#declare objective uniquetools.use.diamond_axe
+
+#>
+#
+# @within uniquetools:tick
+#declare objective uniquetools.use.netherite_axe
+
+#>
+#
+# @within uniquetools:tick
 #declare objective uniquetools.sneak_time
 
 #>
