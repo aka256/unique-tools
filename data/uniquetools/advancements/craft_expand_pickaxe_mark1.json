@@ -1,0 +1,13 @@
+{
+  "criteria": {
+    "placeholder": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "uniquetools:expand_pickaxe_mark1"
+      }
+    }
+  },
+  "rewards": {
+    "function": "uniquetools:recipe/expand_pickaxe_mark1"
+  }
+}
