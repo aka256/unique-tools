@@ -13,6 +13,11 @@
   execute as @a[tag=uniquetools.sneak_pushing_once,tag=!uniquetools.sneak_processed] run function uniquetools:core/manage_sneak/pushing_once
   execute as @a[tag=uniquetools.sneak_pushed_twice,tag=!uniquetools.sneak_processed] run function uniquetools:core/manage_sneak/pushed_twice
   execute as @a[tag=uniquetools.sneak_pushing_twice,tag=!uniquetools.sneak_processed] run function uniquetools:core/manage_sneak/pushing_twice
+
+# uniquetools.sneak_pushed or pushing系タグが付与されていないプレイヤーへの対策
+  tag @a[tag=!uniquetools.sneak_processed] add uniquetools.sneak_pushing_twice
+
+# 重複回避用タグの削除
   tag @a remove uniquetools.sneak_processed
 
 # 現在のsneak_timeを保存

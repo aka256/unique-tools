@@ -37,7 +37,5 @@
   scoreboard players operation @a uniquetools.delta_sneak_time = @a uniquetools.sneak_time
   scoreboard objectives add uniquetools.not_sneak_time dummy
 
-  tag @a add uniquetools.sneak_pushed_twice
-
 # core/mine_block_range
   forceload add 0 0
