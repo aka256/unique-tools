@@ -6,4 +6,4 @@
 #
 # @internal
 
-execute at @s run clone ~ ~ ~ ~ ~ ~ 0 -64 0
+execute at @s run clone ~ ~ ~ ~ ~ ~ 15 -63 15

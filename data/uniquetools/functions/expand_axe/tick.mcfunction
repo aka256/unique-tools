@@ -39,4 +39,4 @@
 # target_entityの設置
   data modify storage uniquetools.__temp__:core/get_target_block __input__ merge value {tool_type:"axe"} 
   execute as @s at @s run function uniquetools:core/get_target_block/main
-  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} as @e[tag=uniquetools.target_center_entity] run function uniquetools:core/mine_block_range/clone
+  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} as @e[tag=uniquetools.target_center_entity] run function uniquetools:core/mine_block_range_with_ench/clone
