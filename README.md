@@ -1,13 +1,14 @@
 # unique-tools
 
 様々なツールを追加するMinecraftのData Packである。JE 1.18.xを対象とする。
-詳細は[Wiki](https://github.com/aka256/unique-tools/wiki)を参照。
 
 ## ダウンロード方法
 
 [Releases](https://github.com/aka256/unique-tools/releases)から最新の「UniqueTools.zip」をダウンロードする。もしくは[ここ](https://github.com/aka256/unique-tools/releases/latest/download/UniqueTools.zip)から。
 
 ## 追加されるアイテム
+
+アイテムのレシピや設定などの詳細は[Wiki](https://github.com/aka256/unique-tools/wiki/%E8%BF%BD%E5%8A%A0%E3%81%95%E3%82%8C%E3%82%8B%E3%83%84%E3%83%BC%E3%83%AB)を参照。
 
 ### 範囲採掘/破壊系アイテム
 
