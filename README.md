@@ -1,7 +1,11 @@
 # unique-tools
 
-様々なツールを追加するMinecraftのData Packである。
+様々なツールを追加するMinecraftのData Packである。JE 1.18.xを対象とする。
 詳細は[Wiki](https://github.com/aka256/unique-tools/wiki)を参照。
+
+## ダウンロード方法
+
+[Releases](https://github.com/aka256/unique-tools/releases)から最新の「UniqueTools.zip」をダウンロードする。もしくは[ここ](https://github.com/aka256/unique-tools/releases/latest/download/UniqueTools.zip)から。
 
 ## 追加されるアイテム
 
