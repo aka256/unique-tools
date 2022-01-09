@@ -55,3 +55,4 @@
 
 # core/mine_block_range
   forceload add 0 0
+  function uniquetools:core/mine_block_range_with_ench/load
