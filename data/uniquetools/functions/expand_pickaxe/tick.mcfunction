@@ -23,7 +23,7 @@
   tag @s[tag=uniquetools.use.expand_pickaxe_mark2] add uniquetools.use.expand_pickaxe
 
 # function実行
-  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} as @s[tag=uniquetools.use.expand_pickaxe] run function uniquetools:expand_pickaxe/use
+  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} at @s[tag=uniquetools.use.expand_axe] if block ~ ~ ~ #uniquetools:air as @s run function uniquetools:expand_pickaxe/use
   execute as @s[tag=uniquetools.sneaked_twice] run function uniquetools:expand_pickaxe/setting/main
 
 # tagの削除
