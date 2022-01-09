@@ -23,7 +23,7 @@
   tag @s[tag=uniquetools.use.expand_axe_mark2] add uniquetools.use.expand_axe
 
 # function実行
-  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} at @s[tag=uniquetools.use.expand_axe] if block ~ ~ ~ #uniquetools:air as @s run function uniquetools:expand_axe/use
+  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} at @e[tag=uniquetools.target_center_entity] if block ~ ~ ~ #uniquetools:air as @s[tag=uniquetools.use.expand_axe] run function uniquetools:expand_axe/use
   execute as @s[tag=uniquetools.sneaked_twice] run function uniquetools:expand_axe/setting/main
 
 # tagの削除

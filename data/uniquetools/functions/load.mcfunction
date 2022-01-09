@@ -20,6 +20,11 @@
   scoreboard players set $t6 uniquetools.temp 0
   scoreboard players set $t7 uniquetools.temp 0
 
+# loot replace用armor_stand
+  summon armor_stand 0 -70 0 {Tags:["uniquetools.entity"], NoGravity:true, Invisible:true, UUID:[I;4096, 4096, 4096, 4096]}
+  forceload add 0 0
+  #alias uuid 4096-4096-4096-4096 1000-0-1000-0-100000001000
+
 # expand_pickaxe
   scoreboard objectives add uniquetools.use.diamond_pickaxe used:diamond_pickaxe
   scoreboard objectives add uniquetools.use.delta.diamond_pickaxe dummy
@@ -52,7 +57,3 @@
   scoreboard objectives add uniquetools.delta_sneak_time dummy
   scoreboard players operation @a uniquetools.delta_sneak_time = @a uniquetools.sneak_time
   scoreboard objectives add uniquetools.not_sneak_time dummy
-
-# core/mine_block_range
-  forceload add 0 0
-  function uniquetools:core/mine_block_range_with_ench/load

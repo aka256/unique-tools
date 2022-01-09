@@ -17,7 +17,7 @@
 #       0, 1, 2, 3
 #
 # @internal
-
+say main
 # プレイヤーが破壊したブロックのidを取得
   function #oh_my_dat:please
   data modify storage uniquetools.__temp__:core/mine_block_range_with_ench __temp__.target_block set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].uniquetools.core.mine_block_range_with_ench.target_block

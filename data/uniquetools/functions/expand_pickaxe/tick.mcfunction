@@ -22,8 +22,8 @@
   tag @s[tag=uniquetools.use.expand_pickaxe_mark1] add uniquetools.use.expand_pickaxe
   tag @s[tag=uniquetools.use.expand_pickaxe_mark2] add uniquetools.use.expand_pickaxe
 
-# function実行
-  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} at @s[tag=uniquetools.use.expand_axe] if block ~ ~ ~ #uniquetools:air as @s run function uniquetools:expand_pickaxe/use
+# function実行  TODO: FIX private storage
+  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} at @e[tag=uniquetools.target_center_entity] if block ~ ~ ~ #uniquetools:air as @s[tag=uniquetools.use.expand_pickaxe] run function uniquetools:expand_pickaxe/use
   execute as @s[tag=uniquetools.sneaked_twice] run function uniquetools:expand_pickaxe/setting/main
 
 # tagの削除
