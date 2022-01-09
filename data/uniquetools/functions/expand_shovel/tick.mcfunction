@@ -23,7 +23,8 @@
   tag @s[tag=uniquetools.use.expand_shovel_mark2] add uniquetools.use.expand_shovel
 
 # function実行
-  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} at @e[tag=uniquetools.target_center_entity] if block ~ ~ ~ #uniquetools:air as @s[tag=uniquetools.use.expand_shovel] run function uniquetools:expand_shovel/use
+  function #oh_my_dat:please
+  execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].uniquetools.core{get_target_block:{success:true}} at @e[tag=uniquetools.target_center_entity] if block ~ ~ ~ #uniquetools:air as @s[tag=uniquetools.use.expand_shovel] run function uniquetools:expand_shovel/use
   execute as @s[tag=uniquetools.sneaked_twice] run function uniquetools:expand_shovel/setting/main
 
 # tagの削除
@@ -39,4 +40,5 @@
 # target_entityの設置
   data modify storage uniquetools.__temp__:core/get_target_block __input__ merge value {tool_type:"shovel"} 
   execute as @s at @s run function uniquetools:core/get_target_block/main
-  execute if data storage uniquetools.__temp__:core/get_target_block {__output__:{success:1b}} as @e[tag=uniquetools.target_center_entity] run function uniquetools:core/mine_block_range_with_ench/clone
+  function #oh_my_dat:please
+  execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].uniquetools.core{get_target_block:{success:true}} as @e[tag=uniquetools.target_center_entity] run function uniquetools:core/mine_block_range_with_ench/clone

@@ -1,7 +1,7 @@
 #> uniquetools:core/get_target_block/rec_shovel
 #
 # @within uniquetools:core/get_target_block/**
-#say rec_pickaxe
+
 # 1歩前進
   execute at @s run tp @s ^ ^ ^0.05
 

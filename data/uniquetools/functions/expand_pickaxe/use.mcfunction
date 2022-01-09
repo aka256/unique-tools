@@ -1,7 +1,7 @@
 #> uniquetools:expand_pickaxe/use
 #
 # @within uniquetools:expand_pickaxe/tick
-say use
+
 # サイズの指定
   execute as @s[tag=uniquetools.use.expand_pickaxe_mark1] store result storage uniquetools.__temp__:core/mine_block_range_with_ench __input__.size int 1 run scoreboard players get @s uniquetools.config.expand_pickaxe_mark1.size
   execute as @s[tag=uniquetools.use.expand_pickaxe_mark2] store result storage uniquetools.__temp__:core/mine_block_range_with_ench __input__.size int 1 run scoreboard players get @s uniquetools.config.expand_pickaxe_mark2.size
