@@ -19,3 +19,9 @@
 また、範囲は該当ツールを持った状態でShiftを短時間に2回押すことにより切り替えることができる。
 
 ![mode_setting_explain](https://raw.githubusercontent.com/wiki/aka256/unique-tools/images/mode_setting_explain.gif)
+
+## 使用したライブラリ
+
+このData Packでは以下のライブラリを使用している。
+
+- [Oh! My Dat!](https://github.com/Ai-Akaishi/OhMyDat) (赤石愛氏)
