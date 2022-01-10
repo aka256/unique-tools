@@ -1,6 +1,6 @@
-#> uniquetools:load
+#> uniquetools:load_once
 #
-# @handles #minecraft:load
+# @within uniquetools:tick
 
 # 定数
   scoreboard objectives add uniquetools.const dummy
@@ -24,6 +24,12 @@
   summon armor_stand 0 -70 0 {Tags:["uniquetools.entity"], NoGravity:true, Invisible:true, UUID:[I;4096, 4096, 4096, 4096]}
   forceload add 0 0
   #alias uuid 4096-4096-4096-4096 1000-0-1000-0-100000001000
+
+# player固有id
+# 範囲は1073741760 ~ 2147483520の1,073,741,760個
+# https://twitter.com/intsuc/status/1429779664856178694
+  scoreboard objectives add uniquetools.id dummy
+  data modify storage uniquetools:config latest_id set value 1073741760
 
 # expand_pickaxe
   scoreboard objectives add uniquetools.use.diamond_pickaxe used:diamond_pickaxe
@@ -55,5 +61,7 @@
 # core/manage_sneak
   scoreboard objectives add uniquetools.sneak_time custom:sneak_time
   scoreboard objectives add uniquetools.delta_sneak_time dummy
-  scoreboard players operation @a uniquetools.delta_sneak_time = @a uniquetools.sneak_time
   scoreboard objectives add uniquetools.not_sneak_time dummy
+
+# loaded flag
+  data modify storage uniquetools:config load_once.loaded set value true

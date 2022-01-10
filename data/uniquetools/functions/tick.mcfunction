@@ -2,7 +2,10 @@
 #
 # @handles #minecraft:tick
 
-#
+# load once
+  execute unless data storage uniquetools:config {load_once:{loaded:true}} run function uniquetools:load_once
+
+# initialize
   execute as @a[tag=!uniquetools.initialized] run function uniquetools:init
 
 # sneak検知&Tag付与
