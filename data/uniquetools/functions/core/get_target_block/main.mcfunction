@@ -32,7 +32,11 @@
 # armor_standの削除
   kill @e[tag=uniquetools.target_entity]
 
+# idの付与
+  scoreboard players operation @e[distance=..10,tag=uniquetools.target_center_entity,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
+  scoreboard players operation @e[distance=..10,tag=uniquetools.target_surface_entity,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
+  tag @e remove uniqeutools.not_has_id_entity
+
 # 返り値の保存
-  #execute store result storage uniquetools.__temp__:core/get_target_block __output__.success byte 1 run scoreboard players get $t1 uniquetools.temp
   function #oh_my_dat:please
   execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].uniquetools.core.get_target_block.success byte 1 run scoreboard players get $t1 uniquetools.temp

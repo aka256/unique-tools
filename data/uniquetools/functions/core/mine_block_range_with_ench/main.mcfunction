@@ -22,9 +22,14 @@
   function #oh_my_dat:please
   data modify storage uniquetools.__temp__:core/mine_block_range_with_ench __temp__.target_block set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].uniquetools.core.mine_block_range_with_ench.target_block
 
+# idの一致するエンティティの取得
+  scoreboard players operation $t0 uniquetools.temp = @s uniquetools.id
+  execute as @e[distance=..10,tag=uniquetools.target_center_entity] if score @s uniquetools.id = $t0 uniquetools.temp run tag @s add uniquetools.core.mine_block_range_with_ench.selected_target
+  execute as @e[distance=..10,tag=uniquetools.target_surface_entity] if score @s uniquetools.id = $t0 uniquetools.temp run tag @s add uniquetools.core.mine_block_range_with_ench.selected_target
+
 # uniquetools.core.mine_block_range_with_ench.target_entityの召喚&target_center_entityの位置からtarget_surface_entityを見るよう設置
-  execute at @e[tag=uniquetools.target_center_entity] run summon armor_stand ~ ~ ~ {Tags:["uniquetools.core.mine_block_range_with_ench.target_entity"], NoGravity:true}
-  execute as @e[tag=uniquetools.target_center_entity] at @s facing entity @e[tag=uniquetools.target_surface_entity] eyes run tp @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] ~ ~ ~ ~ ~
+  execute at @e[tag=uniquetools.target_center_entity, tag=uniquetools.core.mine_block_range_with_ench.selected_target] run summon armor_stand ~ ~ ~ {Tags:["uniquetools.core.mine_block_range_with_ench.target_entity"], NoGravity:true}
+  execute as @e[tag=uniquetools.target_center_entity, tag=uniquetools.core.mine_block_range_with_ench.selected_target] at @s facing entity @e[tag=uniquetools.target_surface_entity, tag=uniquetools.core.mine_block_range_with_ench.selected_target] eyes run tp @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] ~ ~ ~ ~ ~
 
 # フィルター
   execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 3}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/filtering_3x3
