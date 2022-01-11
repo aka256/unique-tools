@@ -10,7 +10,7 @@
 #     tool_type : string
 #       pickaxe, axe, shovel
 # @output
-#   storage uniquetools.__temp__:core/get_target_block __output__
+#   storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].uniquetools.core.get_target_block
 #     success : byte
 #       uniquetools.core.get_target_block.centerおよびuniquetools.core.get_target_block.surfaceの設置が成功したかどうか
 #
