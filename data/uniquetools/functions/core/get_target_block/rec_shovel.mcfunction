@@ -1,16 +1,12 @@
 #> uniquetools:core/get_target_block/rec_shovel
 #
-# @within uniquetools:core/get_target_block/**
-
-# 1歩前進
-  execute at @s run tp @s ^ ^ ^0.05
-
-# インクリメント
-  scoreboard players add $t0 uniquetools.temp 1
+# @context uniquetools.core.get_target_block.detect
+#
+# @within
+#   uniquetools:core/get_target_block/main
+#   uniquetools:core/get_target_block/rec_shovel2
 
 # 分岐
-  execute if score $t0 uniquetools.temp < TARGET_RANGE_LIMIT uniquetools.const at @s if block ~ ~0.5 ~ #minecraft:mineable/shovel as @s run function uniquetools:core/get_target_block/ok
-  execute if score $t0 uniquetools.temp < TARGET_RANGE_LIMIT uniquetools.const at @s unless block ~ ~0.5 ~ #minecraft:mineable/shovel unless block ~ ~0.5 ~ #uniquetools:air run scoreboard players operation $t0 uniquetools.temp = TARGET_RANGE_LIMIT uniquetools.const
-  execute if score $t0 uniquetools.temp < TARGET_RANGE_LIMIT uniquetools.const at @s if block ~ ~0.5 ~ #uniquetools:air as @s run function uniquetools:core/get_target_block/rec_shovel
-
-  execute if score $0 uniquetools.temp = TARGET_RANGE_LIMIT uniquetools.const as @s run function uniquetools:core/get_target_block/ng
+  execute if score $t0 uniquetools.temp < TARGET_RANGE_LIMIT uniquetools.const at @s if block ~ ~ ~ #minecraft:mineable/shovel run function uniquetools:core/get_target_block/ok
+  execute if score $t0 uniquetools.temp < TARGET_RANGE_LIMIT uniquetools.const at @s unless block ~ ~ ~ #minecraft:mineable/shovel unless block ~ ~ ~ #uniquetools:air run scoreboard players operation $t0 uniquetools.temp = TARGET_RANGE_LIMIT uniquetools.const
+  execute if score $t0 uniquetools.temp < TARGET_RANGE_LIMIT uniquetools.const at @s if block ~ ~ ~ #uniquetools:air run function uniquetools:core/get_target_block/rec_shovel2

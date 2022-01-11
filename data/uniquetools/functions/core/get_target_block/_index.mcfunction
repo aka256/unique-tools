@@ -2,7 +2,7 @@
 # @private
 
 #>
-# uniquetools.target_entityの進んだ数
+# uniquetools.core.get_target_block.detectの進んだ数
 # @within uniquetools:core/get_target_block/**
 #declare score_holder $t0
 
@@ -14,7 +14,7 @@
 #>
 # ターゲットブロックを検知するためのエンティティのTag
 # @within uniquetools:core/get_target_block/**
-#declare tag uniquetools.target_entity
+#declare tag uniquetools.core.get_target_block.detect
 
 #>
 # ターゲットブロックの中心を指すエンティティ
