@@ -19,9 +19,9 @@
 #>
 # ターゲットブロックの中心を指すエンティティ
 # @internal
-#declare tag uniquetools.target_center_entity
+#declare tag uniquetools.core.get_target_block.center
 
 #>
 # ターゲットブロックの表面を指すエンティティ
 # @internal
-#declare tag uniquetools.target_surface_entity
+#declare tag uniquetools.core.get_target_block.surface

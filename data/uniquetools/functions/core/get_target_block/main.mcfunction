@@ -1,8 +1,8 @@
 #> uniquetools:core/get_target_block/main
 #
 # 実行者の視線上のブロックにmarkerを設置する
-# - uniquetools.target_center_entity: ターゲットブロックの中心
-# - uniquetools.target_surface_entity: ターゲットブロックの表面
+# - uniquetools.core.get_target_block.center: ターゲットブロックの中心
+# - uniquetools.core.get_target_block.surface: ターゲットブロックの表面
 #
 # @context ターゲッティングしているブロックを取得したいプレイヤー
 # @input
@@ -12,7 +12,7 @@
 # @output
 #   storage uniquetools.__temp__:core/get_target_block __output__
 #     success : byte
-#       uniquetools.target_center_entityおよびuniquetools.target_surface_entityの設置が成功したかどうか
+#       uniquetools.core.get_target_block.centerおよびuniquetools.core.get_target_block.surfaceの設置が成功したかどうか
 #
 # @public
 
@@ -33,8 +33,8 @@
   kill @e[tag=uniquetools.core.get_target_block.detect]
 
 # idの付与
-  scoreboard players operation @e[distance=..10,tag=uniquetools.target_center_entity,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
-  scoreboard players operation @e[distance=..10,tag=uniquetools.target_surface_entity,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
+  scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.center,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
+  scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.surface,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
   tag @e remove uniqeutools.not_has_id_entity
 
 # 返り値の保存
