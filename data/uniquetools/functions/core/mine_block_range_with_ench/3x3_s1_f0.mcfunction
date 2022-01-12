@@ -1,6 +1,6 @@
-#> uniquetools:core/mine_block_range_with_ench/3x3_s0_f0
+#> uniquetools:core/mine_block_range_with_ench/3x3_s1_f0
 #
-# @within uniquetools:core/mine_block_range_with_ench/main
+# @within uniquetools:core/mine_block_range_with_ench/main3
 
 execute unless data storage uniquetools.__temp__:core/mine_block_range_with_ench __temp__.non_destruction_filter[0][0]._{flg: true} run loot spawn ~ ~ ~ mine ^-1 ^-1 ^ diamond_pickaxe{Enchantments:[{id:"silk_touch", lvl:1s}, {id:"fortune", lvl:1s}]}
 execute unless data storage uniquetools.__temp__:core/mine_block_range_with_ench __temp__.non_destruction_filter[0][0]._{flg: true} run setblock ^-1 ^-1 ^ air

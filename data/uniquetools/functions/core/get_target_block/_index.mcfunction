@@ -18,10 +18,20 @@
 
 #>
 # ターゲットブロックの中心を指すエンティティ
-# @internal
+# @within uniquetools:core/**
 #declare tag uniquetools.core.get_target_block.center
 
 #>
 # ターゲットブロックの表面を指すエンティティ
-# @internal
+# @within uniquetools:core/**
 #declare tag uniquetools.core.get_target_block.surface
+
+#>
+# idを持っていないuniquetools.core.get_target_block.centerもしくはuniquetools.core.get_target_block.surfaceを持つエンティティ
+# @within uniquetools:core/get_target_block/**
+#declare tag uniquetools.core.get_target_block.not_has_id
+
+#>
+# core/get_target_blockの一時ストレージ
+# @internal
+#declare storage uniqeutools.__temp__:core/get_target_block

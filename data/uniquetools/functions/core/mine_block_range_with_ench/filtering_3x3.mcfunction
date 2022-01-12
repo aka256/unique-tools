@@ -1,6 +1,6 @@
 #> uniquetools:core/mine_block_range_with_ench/filtering_3x3
 #
-# @within uniquetools:core/mine_block_range_with_ench/main
+# @within uniquetools:core/mine_block_range_with_ench/main3
 
 data merge storage uniquetools.__temp__:core/mine_block_range_with_ench {__temp__:{non_destruction_filter:[[{_:{flg: 1b}}, {_:{flg: 1b}}, {_:{flg: 1b}}], [{_:{flg: 1b}}, {_:{flg: 1b}}, {_:{flg: 1b}}], [{_:{flg: 1b}}, {_:{flg: 1b}}, {_:{flg: 1b}}]]}}
 

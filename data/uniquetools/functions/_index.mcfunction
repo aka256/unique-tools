@@ -7,14 +7,8 @@
 #declare objective uniquetools.const
 
 #>
-# 
 # @within uniquetools:core/get_target_block/**
 #declare score_holder TARGET_RANGE_LIMIT
-
-#>
-#
-# @internal
-#declare score_holder $0
 
 #>
 # 一時変数
@@ -54,47 +48,38 @@
 #declare score_holder $t7
 
 #>
-#
 # @within uniquetools:tick
 #declare objective uniquetools.use.diamond_pickaxe
 
 #>
-#
 # @within uniquetools:tick
 #declare objective uniquetools.use.netherite_pickaxe
 
 #>
-#
 # @within uniquetools:tick
 #declare objective uniquetools.use.diamond_shovel
 
 #>
-#
 # @within uniquetools:tick
 #declare objective uniquetools.use.netherite_shovel
 
 #>
-#
 # @within uniquetools:tick
 #declare objective uniquetools.use.diamond_axe
 
 #>
-#
 # @within uniquetools:tick
 #declare objective uniquetools.use.netherite_axe
 
 #>
-#
 # @within uniquetools:tick
 #declare objective uniquetools.sneak_time
 
 #>
-#
 # @within uniquetools:tick
 #declare objective uniquetools.delta_sneak_time
 
 #>
-#
 # @internal
 #declare tag uniquetools.sneak
 
@@ -109,3 +94,7 @@
 #   uniquetools:init
 #   uniquetools:tick
 #declare tag uniquetools.initialized
+
+#>
+# @within uniquetools:*
+#declare storage uniquetools:config

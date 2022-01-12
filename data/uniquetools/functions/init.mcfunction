@@ -19,7 +19,7 @@
   scoreboard players set @s uniquetools.config.expand_axe_mark2.size 1
 
 # core/manage_sneak
-  tag @s add uniquetools.sneak_pushed_twice
+  tag @s add uniquetools.core.manage_sneak.pushed_twice
   scoreboard players operation @s uniquetools.delta_sneak_time = @s uniquetools.sneak_time
 
 # プレイヤー固有id

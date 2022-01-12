@@ -12,10 +12,6 @@
   function uniquetools:core/manage_sneak/tick
 
 # expand系toolを持っているplayerを対象としてfunctionを実行
-  #execute as @a[nbt={SelectedItem:{tag:{Tags:["uniquetools.expand_tools.pickaxe"]}}}] run function uniquetools:expand_tools/pickaxe/tick
-  #execute as @a[nbt={SelectedItem:{tag:{Tags:["uniquetools.expand_tools.shovel"]}}}] run function uniquetools:expand_tools/shovel/tick
-  #execute as @a[nbt={SelectedItem:{tag:{Tags:["uniquetools.expand_tools.axe"]}}}] run function uniquetools:expand_tools/axe/tick
-
   execute as @a[nbt={SelectedItem:{tag:{Tags:["uniquetools.expand_tool"]}}}] run function uniquetools:expand_tools/tick
 
 #

@@ -4,7 +4,6 @@
 
 # 定数
   scoreboard objectives add uniquetools.const dummy
-  scoreboard players set $0 uniquetools.const 0
 
   # core/get_target_block
     scoreboard players set TARGET_RANGE_LIMIT uniquetools.const 101

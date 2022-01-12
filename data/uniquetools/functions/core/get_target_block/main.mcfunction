@@ -14,7 +14,7 @@
 #     success : byte
 #       uniquetools.core.get_target_block.centerおよびuniquetools.core.get_target_block.surfaceの設置が成功したかどうか
 #
-# @public
+# @internal
 
 # armor_standの召喚と位置修正
   execute at @s run summon armor_stand ~ ~ ~ {Tags:["uniquetools.core.get_target_block.detect"], NoGravity:true, Small:false, Invisible:true, Marker:true}
@@ -33,8 +33,8 @@
   kill @e[tag=uniquetools.core.get_target_block.detect]
 
 # idの付与
-  execute at @s run scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.center,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
-  execute at @s run scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.surface,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
+  execute at @s run scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.center,tag=uniquetools.core.get_target_block.not_has_id] uniquetools.id = @s uniquetools.id
+  execute at @s run scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.surface,tag=uniquetools.core.get_target_block.not_has_id] uniquetools.id = @s uniquetools.id
   tag @e remove uniqeutools.not_has_id_entity
 
 # 返り値の保存

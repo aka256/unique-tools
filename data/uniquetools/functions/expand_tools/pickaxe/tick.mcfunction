@@ -30,11 +30,11 @@
   execute as @s[tag=uniquetools.sneaked_twice] run function uniquetools:expand_tools/pickaxe/setting/main
 
 # tagの削除
-  tag @a remove uniquetools.has.expand_pickaxe_mark1
-  tag @a remove uniquetools.has.expand_pickaxe_mark2
-  tag @a remove uniquetools.use.expand_pickaxe
-  tag @a remove uniquetools.use.expand_pickaxe_mark1
-  tag @a remove uniquetools.use.expand_pickaxe_mark2
+  tag @s remove uniquetools.has.expand_pickaxe_mark1
+  tag @s remove uniquetools.has.expand_pickaxe_mark2
+  tag @s remove uniquetools.use.expand_pickaxe
+  tag @s remove uniquetools.use.expand_pickaxe_mark1
+  tag @s remove uniquetools.use.expand_pickaxe_mark2
 
 # target_entityの設置
   data modify storage uniquetools.__temp__:core/get_target_block __input__ merge value {tool_type:"pickaxe"} 
