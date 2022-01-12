@@ -18,23 +18,23 @@
 
 # armor_standの召喚と位置修正
   execute at @s run summon armor_stand ~ ~ ~ {Tags:["uniquetools.core.get_target_block.detect"], NoGravity:true, Small:false, Invisible:true, Marker:true}
-  execute anchored eyes run tp @e[distance=..5,tag=uniquetools.core.get_target_block.detect] ^ ^ ^ ~ ~
+  execute at @s anchored eyes run tp @e[distance=..5,tag=uniquetools.core.get_target_block.detect] ^ ^ ^ ~ ~
 
 # カウント用スコアの初期化
   scoreboard players set $t0 uniquetools.temp 0
   scoreboard players set $t1 uniquetools.temp 0
 
 # 再帰処理の実行
-  execute if data storage uniquetools.__temp__:core/get_target_block {__input__:{tool_type:"pickaxe"}} as @e[distance=..5,tag=uniquetools.core.get_target_block.detect] run function uniquetools:core/get_target_block/rec_pickaxe
-  execute if data storage uniquetools.__temp__:core/get_target_block {__input__:{tool_type:"axe"}} as @e[distance=..5,tag=uniquetools.core.get_target_block.detect] run function uniquetools:core/get_target_block/rec_axe
-  execute if data storage uniquetools.__temp__:core/get_target_block {__input__:{tool_type:"shovel"}} as @e[distance=..5,tag=uniquetools.core.get_target_block.detect] run function uniquetools:core/get_target_block/rec_shovel
+  execute if data storage uniquetools.__temp__:core/get_target_block {__input__:{tool_type:"pickaxe"}} at @s as @e[distance=..5,tag=uniquetools.core.get_target_block.detect] run function uniquetools:core/get_target_block/rec_pickaxe
+  execute if data storage uniquetools.__temp__:core/get_target_block {__input__:{tool_type:"axe"}} at @s as @e[distance=..5,tag=uniquetools.core.get_target_block.detect] run function uniquetools:core/get_target_block/rec_axe
+  execute if data storage uniquetools.__temp__:core/get_target_block {__input__:{tool_type:"shovel"}} at @s as @e[distance=..5,tag=uniquetools.core.get_target_block.detect] run function uniquetools:core/get_target_block/rec_shovel
 
 # armor_standの削除
   kill @e[tag=uniquetools.core.get_target_block.detect]
 
 # idの付与
-  scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.center,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
-  scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.surface,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
+  execute at @s run scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.center,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
+  execute at @s run scoreboard players operation @e[distance=..10,tag=uniquetools.core.get_target_block.surface,tag=uniquetools.not_has_id_entity] uniquetools.id = @s uniquetools.id
   tag @e remove uniqeutools.not_has_id_entity
 
 # 返り値の保存
