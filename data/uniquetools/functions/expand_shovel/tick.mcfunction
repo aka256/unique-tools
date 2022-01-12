@@ -2,6 +2,8 @@
 #
 # playerがexpand_shovelを持っているときに実行
 #
+# @context expand_shovelを持つプレイヤー
+#
 # @within uniquetools:tick
 
 # expand pickのタイプ検知
@@ -24,7 +26,7 @@
 
 # function実行
   function #oh_my_dat:please
-  execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].uniquetools.core{get_target_block:{success:true}} at @e[tag=uniquetools.core.get_target_block.center] if block ~ ~ ~ #uniquetools:air as @s[tag=uniquetools.use.expand_shovel] run function uniquetools:expand_shovel/use
+  execute if data storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].uniquetools.core{get_target_block:{success:true}} as @s[tag=uniquetools.use.expand_shovel] run function uniquetools:expand_shovel/use
   execute as @s[tag=uniquetools.sneaked_twice] run function uniquetools:expand_shovel/setting/main
 
 # tagの削除

@@ -21,7 +21,7 @@
   scoreboard players set $t7 uniquetools.temp 0
 
 # loot replace用armor_stand
-  summon armor_stand 0 -70 0 {Tags:["uniquetools.entity"], NoGravity:true, Invisible:true, UUID:[I;4096, 4096, 4096, 4096]}
+  summon armor_stand 0 -70 0 {Tags:["uniquetools.entity"], NoGravity:true, Invisible:true, UUID:[I;4096, 4096, 4096, 4096], Marker:true}
   forceload add 0 0
   #alias uuid 4096-4096-4096-4096 1000-0-1000-0-100000001000
 

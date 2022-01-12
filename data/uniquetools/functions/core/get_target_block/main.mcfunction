@@ -17,7 +17,7 @@
 # @public
 
 # armor_standの召喚と位置修正
-  execute at @s run summon armor_stand ~ ~ ~ {Tags:["uniquetools.core.get_target_block.detect"], NoGravity:true, Small:false, Invisible:true}
+  execute at @s run summon armor_stand ~ ~ ~ {Tags:["uniquetools.core.get_target_block.detect"], NoGravity:true, Small:false, Invisible:true, Marker:true}
   execute anchored eyes run tp @e[distance=..5,tag=uniquetools.core.get_target_block.detect] ^ ^ ^ ~ ~
 
 # カウント用スコアの初期化

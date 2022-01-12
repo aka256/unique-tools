@@ -9,4 +9,4 @@
   scoreboard players add $t0 uniquetools.temp 1
 
 # 
-  function uniquetools:core/get_target_block/rec_pickaxe
+  function uniquetools:core/get_target_block/rec_shovel

@@ -24,28 +24,8 @@
 
 # idの一致するエンティティの取得
   scoreboard players operation $t0 uniquetools.temp = @s uniquetools.id
-  execute as @e[distance=..10,tag=uniquetools.core.get_target_block.center] if score @s uniquetools.id = $t0 uniquetools.temp run tag @s add uniquetools.core.mine_block_range_with_ench.selected_target
-  execute as @e[distance=..10,tag=uniquetools.core.get_target_block.surface] if score @s uniquetools.id = $t0 uniquetools.temp run tag @s add uniquetools.core.mine_block_range_with_ench.selected_target
+  execute at @s as @e[distance=..10,tag=uniquetools.core.get_target_block.center] if score @s uniquetools.id = $t0 uniquetools.temp run tag @s add uniquetools.core.mine_block_range_with_ench.selected_target
+  execute at @s as @e[distance=..10,tag=uniquetools.core.get_target_block.surface] if score @s uniquetools.id = $t0 uniquetools.temp run tag @s add uniquetools.core.mine_block_range_with_ench.selected_target
 
-# uniquetools.core.mine_block_range_with_ench.target_entityの召喚&target_center_entityの位置からtarget_surface_entityを見るよう設置
-  execute at @e[tag=uniquetools.core.get_target_block.center, tag=uniquetools.core.mine_block_range_with_ench.selected_target] run summon armor_stand ~ ~ ~ {Tags:["uniquetools.core.mine_block_range_with_ench.target_entity"], NoGravity:true}
-  execute as @e[tag=uniquetools.core.get_target_block.center, tag=uniquetools.core.mine_block_range_with_ench.selected_target] at @s facing entity @e[tag=uniquetools.core.get_target_block.surface, tag=uniquetools.core.mine_block_range_with_ench.selected_target] eyes run tp @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] ~ ~ ~ ~ ~
-
-# フィルター
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 3}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/filtering_3x3
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 5}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/filtering_5x5
-
-# inputに応じて分岐
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 3, silk_touch: 0, fortune: 0}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/3x3_s0_f0
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 5, silk_touch: 0, fortune: 0}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/5x5_s0_f0
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 3, silk_touch: 1}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/3x3_s1_f0
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 5, silk_touch: 1}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/5x5_s1_f0
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 3, silk_touch: 0, fortune: 1}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/3x3_s0_f1
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 5, silk_touch: 0, fortune: 1}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/5x5_s0_f1
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 3, silk_touch: 0, fortune: 2}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/3x3_s0_f2
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 5, silk_touch: 0, fortune: 2}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/5x5_s0_f2
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 3, silk_touch: 0, fortune: 3}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/3x3_s0_f3
-  execute if data storage uniquetools.__temp__:core/mine_block_range_with_ench {__input__:{size: 5, silk_touch: 0, fortune: 3}} as @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity] at @s run function uniquetools:core/mine_block_range_with_ench/5x5_s0_f3
-
-# kill
-  kill @e[tag=uniquetools.core.mine_block_range_with_ench.target_entity]
+# uniquetools.core.get_target_block_centerの位置の状態による分岐
+  execute at @s as @e[distance=..10,tag=uniquetools.core.get_target_block.center,tag=uniquetools.core.mine_block_range_with_ench.selected_target] at @s if block ~ ~ ~ #uniquetools:air run function uniquetools:core/mine_block_range_with_ench/main2
